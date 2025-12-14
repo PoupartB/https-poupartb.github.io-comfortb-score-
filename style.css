@@ -1,0 +1,40 @@
+:root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+body { margin: 0; background: #f6f7fb; color: #111; }
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.header { margin-bottom: 14px; }
+.subtitle { margin: 6px 0 0; color: #444; }
+
+.card { background: #fff; border-radius: 16px; padding: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.06); margin-bottom: 14px; }
+
+.toolbar .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+label { display: inline-flex; gap: 8px; align-items: center; padding: 8px 10px; border: 1px solid #eee; border-radius: 12px; }
+label.file { padding: 6px 10px; }
+label.toggle { user-select: none; }
+input[type="file"] { max-width: 240px; }
+button { border: 0; border-radius: 12px; padding: 10px 12px; cursor: pointer; background: #111; color: #fff; }
+button#undoBtn, button#clearBtn { background: #e9e9ee; color: #111; }
+.mono { font-variant-numeric: tabular-nums; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  border-radius: 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+.stage img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.stage canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  touch-action: none;
+}
+
+.hint { margin: 10px 2px 0; color: #555; font-size: 14px; }
