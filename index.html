@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schéma – coloriage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Schéma – coloriage</h1>
+      <p class="subtitle">Charge une image, puis colorie dessus (pinceau / gomme / export).</p>
+    </header>
+
+    <section class="toolbar card">
+      <div class="row">
+        <label class="file">
+          <span>Image</span>
+          <input id="fileInput" type="file" accept="image/*" />
+        </label>
+
+        <label>
+          Couleur
+          <input id="color" type="color" value="#ff0000" />
+        </label>
+
+        <label>
+          Taille
+          <input id="size" type="range" min="1" max="40" value="10" />
+          <span id="sizeVal" class="mono">10</span>
+        </label>
+
+        <label class="toggle">
+          <input id="eraser" type="checkbox" />
+          Gomme
+        </label>
+      </div>
+
+      <div class="row">
+        <button id="undoBtn" type="button">Annuler</button>
+        <button id="clearBtn" type="button">Tout effacer</button>
+        <button id="exportBtn" type="button">Exporter PNG</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="stage" id="stage">
+        <img id="bg" alt="Image de fond" />
+        <canvas id="paint"></canvas>
+      </div>
+      <p class="hint">Sur mobile : dessine au doigt. Astuce : zoom navigateur si besoin.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
